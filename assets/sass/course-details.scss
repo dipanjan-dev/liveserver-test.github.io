@@ -1,0 +1,213 @@
+.background-section{
+    background-color: black;
+    height: 380px;
+    width: 100%;
+    position: absolute;
+    z-index: -10;
+}
+.course-right-side{
+    margin-top: 100px;
+}
+
+.course-details-card {
+    position: sticky;
+    top: 100px;
+    z-index: 30;
+}
+.course-details-card img{
+    height: 200px;
+    width: 100%;
+}
+.course-details-card .price{
+    margin-top: 30px;
+    font-size: 22px;
+}
+.course-details-card .buttons-grid p{
+    text-align: center;
+    font-size: 12px;
+}
+.course-details-card .include p{
+    font-size: 16px;
+    margin-bottom: 7px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+.course-details-card .include ul li img{
+    height: 15px;
+    width: 15px;
+    margin-right: 7px;
+}
+.course-details-card .include ul li{
+    display: flex;
+    align-items: center;
+}
+
+.course-right-side .details-card{
+    background-color: #264759;
+    height: 600px;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border: 2px solid #264759;
+}
+
+.details{
+    margin-top: 50px;
+}
+
+.breadcrumb a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    color: #a5a5a5
+}
+
+.course-left-side .details h2{
+    line-height: 1.5;
+}
+s p{
+    line-height: 1.5;
+}
+
+.course-left-side .badge{
+    background-color: #f0cc71;
+    margin-right: 7px;
+    border-radius: 0;
+    color: #34363b;
+}
+
+.what-learn li img{
+    height: 15px;
+    margin-right: 7px;
+    margin-top: 5px;
+}
+.what-learn li{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.body-details{
+    margin-top: 100px;
+    background-color: #494d53;
+    padding: 10px 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.body-details h3{
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.company-offer{
+    margin-top: 70px;
+    background-color: #494d53;
+    padding: 10px 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding-bottom: 40px;
+}
+.company-offer .detail-company-slider{
+    margin-top: 30px;
+}
+
+.company-offer .detail-company-slider .tech-card img{
+    height: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.course-content h3{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.course-content .accordion-item{
+    background-color: #494d53;
+}
+.course-content .accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: #545960;
+    box-shadow: none;
+}
+.course-content .accordion-button:focus{
+    border: none;
+    box-shadow: none;
+}
+.course-content .accordion-button{
+    background-color: #494d53;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+}
+.course-content .accordion-button::after{
+    background: url('./../icons/download.png');
+    background-size: contain;
+}
+
+.course-content .accordion-body ul li{
+    margin-bottom: 10px;
+}
+.course-content .accordion-body {
+    background-color: #414348;
+}
+
+.required{
+    margin-top: 30px;
+}
+.required h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.required ul li{
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 400;
+}
+.recomended{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.recomended .card{
+    border-radius: 0;
+    border-bottom: 1px solid #545960;
+    background-color: #45494f;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.recomended .card img{
+    border-radius: 0;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.recomended .card p{
+    color: #a6a6a6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+}
+.recomended .card a{
+    color: #f0cc71;
+    text-decoration: none;
+    font-weight: 600;
+}
+.recomended .card a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* =================== RESPONSIVE =================== */
+@media(max-width: 991px) {
+    .course-details-card {
+        position: static;
+        z-index: 0;
+    }
+    .course-right-side{
+        margin-top: 50px
+    }
+}
