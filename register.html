@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <title>Aacharya</title>
+    <!--============== Bootstrap 5 CSS ===================== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <!-- =========== Swiper JS CSS CDN ===================== -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- ========== Main Stylesheet ==============-->
+    <link rel="stylesheet" href="./assets/sass/main.css">
+</head>
+
+<body class="app app-signup p-0">    	
+  <div class="row g-0 app-auth-wrapper">
+    <div class="col-12 col-md-7 col-lg-7 auth-main-col text-center p-5">
+      <div class="d-flex flex-column align-content-end">
+        <div class="app-auth-body mx-auto">	
+          <div class="app-auth-branding mb-4"><a class="app-logo" href="index.html"><img class="logo-icon me-2" src="./assets/images/schoolem_logo_circle.png" alt="logo"></a></div>
+        <h2 class="auth-heading text-center mb-5">School of Engineering and Management</h2>
+            <div class="auth-form-container text-start">
+              <form class="auth-form login-form">         
+                <div class="Student-name mb-3">
+                  <label class="sr-only" for="signin-email">Full Name</label>
+                  <input id="signin-email" name="signin-email" type="text" class="form-control signin-email" placeholder="Enter Student Name here.." required="required">
+                </div>
+                <div class="parent-name mb-3">
+                  <label class="sr-only" for="signin-email">Student Grade</label>
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="parent-name mb-3">
+                  <label class="sr-only" for="signin-email">Parent Full Name</label>
+                  <input id="signin-email" name="signin-email" type="text" class="form-control signin-email" placeholder="Enter Student Name here.." required="required">
+                </div>
+                <div class="parent-name mb-3">
+                  <label class="sr-only" for="signin-email">Contact Number</label>
+                  <input id="signin-email" name="signin-email" type="text" class="form-control signin-email" placeholder="Enter Contact here.." required="required">
+                </div>
+                <div class="email mb-3">
+                  <label class="sr-only" for="signin-email">Email</label>
+                  <input id="signin-email" name="signin-email" type="email" class="form-control signin-email" placeholder="Email address" required="required">
+                </div>
+                <div class="password mb-3">
+                  <label class="sr-only" for="signin-password">Password</label>
+                  <input id="signin-password" name="signin-password" type="password" class="form-control signin-password" placeholder="Password" required="required">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto">Register</button>
+                </div>
+              </form>
+              
+          
+          <div class="auth-option text-center pt-5">Don't have Account ?<a class="text-link" href="signup.html"> Sign up </a>.</div>
+        </div><!--//auth-form-container-->	
+
+        </div><!--//auth-body-->
+      
+        <div class="app-auth-footer">
+          <div class="container text-center py-3">
+            <small class="copyright">Getting Trouble On Login <a class="app-link" href="http://themes.3rdwavemedia.com" target="_blank">Contact Us</a></small>
+             
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-5 col-lg-5 h-100 auth-background-col ">
+      <div class="auth-background-holder">
+      </div>
+      <div class="auth-background-mask"></div>
+      <div class="auth-background-overlay p-3 p-lg-5">
+        <div class="d-flex flex-column align-content-end h-100">
+          <div class="h-100"></div>
+          <div class="login-overlay-content p-3 p-lg-4 rounded">
+            <h5 class="mb-3 overlay-title">Explore Portal Admin Template</h5>
+            <div>Portal is a free Bootstrap 5 admin dashboard template. You can download and view the template license <a href="#">here</a>.</div>
+          </div>
+      </div>
+      </div>
+    </div>
+  
+  </div>
+      <!-- ============== Main JavaScript File ======================= -->
+      <script src="./assets/js/main.js"></script>
+
+      <!-- ================== Bootstrap V5 ========================= -->
+      <script src="./assets/js/bootstrap.js"></script>
+  
+      <!-- ================== Swiper JS JavaScript CDN ========================= -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+      </script>
+
+</body>
+</html>

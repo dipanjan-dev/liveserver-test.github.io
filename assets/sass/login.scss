@@ -1,0 +1,228 @@
+.form-control:focus,.form-control:active:focus,.form-control.active:focus,
+.form-control.focus,.form-control:active.focus,.form-control.active.focus {
+    outline: none;
+    box-shadow: none;
+    border-color: 2px solid #264759;
+    background: transparent;
+    color: #fff;
+}
+.form-control{
+    background: transparent;
+    color: #fff;
+    border-color: 2px solid #264759;
+}
+
+.app-login {
+	
+	.auth-background-holder {
+		background: url("./../images/element5-digital-jCIMcOpFHig-unsplash.jpg") no-repeat center center;
+		background-size: cover;
+		height: 100vh;
+		min-height: 100%;
+	}
+}
+
+.app-signup {
+	.auth-background-holder {
+		background: url("../images/giu-vicente-FMArg2k3qOU-unsplash.jpg") no-repeat center center;
+		background-size: cover;
+		height: 100vh;
+		min-height: 100%;
+	}
+}
+
+
+.app-reset-password {
+	.auth-background-holder {
+		background: url("../images/background/background-3.jpg") no-repeat center center;
+		background-size: cover;
+		height: 100vh;
+		min-height: 100%;
+	}
+}
+
+.auth-main-col, .auth-background-col{
+	position: relative;
+}
+
+.auth-background-mask {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.1);
+
+}
+
+.auth-background-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 11;
+	
+	.overlay-title {
+		color: #fff;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	
+	.login-overlay-content {
+		background: rgba(0, 0, 0, 0.749);
+		color: #fff;
+		a {
+			text-decoration: underline;
+			color: #fff;
+		}
+	}
+}
+
+.app-auth-footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+}
+.app-btn-primary{
+    background-color: #264759;
+    color: #fff;
+}
+.app-btn-primary:hover{
+    background-color: #264759;
+    color: #fff;
+}
+.app-signup .auth-background-col{
+    position: fixed !important;
+    right: 0;
+}
+
+
+.app-auth-wrapper {
+	height: 100vh;
+	
+	.app-auth-body {
+		width: 360px;
+	}
+	
+	
+	.app-logo{
+		.logo-icon {
+			width: 60px;
+			height: 60px;
+		}
+	}
+	.auth-heading {
+		font-size: 1.5rem;
+	}
+	
+	.form-control::placeholder {
+        color: #f0f0f03a; 
+	}
+	
+	
+	.legal-note {
+	    font-size: 0.875rem;
+	}    
+
+
+	.extra {
+		font-size: 0.75rem;
+		a {
+            color: #f0f0f0;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+	
+	.auth-heading-desc {
+		font-weight: 500;
+		font-size: 1.125rem;
+	}
+	
+	.legal-note {
+		font-size: 0.75rem;
+	}
+	
+	.auth-option {
+		font-size: 0.875rem;
+	}
+	
+}
+
+.app-auth-footer {
+	.copyright {
+		font-size: 0.75rem;
+	}
+}
+
+.app-login a{
+    color: #f0f0f0;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    &:hover{
+        color: #f0f0f0;
+    }
+}
+.app-signup a{
+    color: #f0f0f0;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    &:hover{
+        color: #f0f0f0;
+    }
+}
+.tab {
+    display: none;
+  }
+
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04AA6D;
+  }
+
+
+// REGISTER
+.app-signup .form-select{
+    background: transparent !important;
+    color: #fff !important;
+    background-image : url('./../icons/download.png')
+
+}
+.app-signup .form-select option{
+    color: #000;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+	.auth-background-col {
+		display: none;
+	}
+	
+	.app-auth-wrapper .app-auth-body{
+		width: 100%;
+	}
+	
+ }
